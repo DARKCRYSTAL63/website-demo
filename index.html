@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meiramew</title>
+    <!-- Link to boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="sample.css">
+    <!-- Link to AOS (Animate On Scroll) library CSS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1><a href="index.html"></a>Meiramew</h1>
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <a href="#" class="nav-link"><i class='bx bx-message-rounded-dots'></i></a>
+            <a href="cart.html" class="nav-link"><i class='bx bx-cart'></i></a>
+            <a href="loginsignup.html" class="nav-link"><i class='bx bx-user'></i></a>
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for delicious food...">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Spacer section with main heading -->
+    <div class="spacer">
+        <h4>Explore The Flavorful World <br> Of <br> Cultural Cuisine</h4>
+    </div>
+
+    <!-- Section for today's special dishes -->
+    <h5>Today's Special</h5>
+    <div class="today-special-container">
+        <button class="scroll-button left" onclick="scrollLeftProducts()">&#10094;</button>
+        <div class="today-special">
+        <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="mainimage.jpg" alt="Product 1">
+                <h3>Traditional Dish 1</h3>
+                <p class="price">$10</p>
+                <p class="offers">20% off on first order</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="image1.jpg" alt="Product 2">
+                <h3>Traditional Dish 2</h3>
+                <p class="price">$12</p>
+                <p class="offers">Buy 1 Get 1 Free</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="image2.jpg" alt="Product 3">
+                <h3>Traditional Dish 3</h3>
+                <p class="price">$15</p>
+                <p class="offers">Free dessert with every meal</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="image3.jpg" alt="Product 4">
+                <h3>Traditional Dish 4</h3>
+                <p class="price">$9</p>
+                <p class="offers">10% off on orders above $50</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="image4.jpg" alt="Product 5">
+                <h3>Traditional Dish 5</h3>
+                <p class="price">$8</p>
+                <p class="offers">15% off for new customers</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="All about Mercedes AMG (1).jpg" alt="Product 6">
+                <h3>Traditional Dish 6</h3>
+                <p class="price">$14</p>
+                <p class="offers">Special weekend discount</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="Men's Wealthy Lifestyle.jpg" alt="Product 5">
+                <h3>Traditional Dish 5</h3>
+                <p class="price">$8</p>
+                <p class="offers">15% off for new customers</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Individual product -->
+            <div class="product" data-aos="fade-up">
+                <img src="Mercedes Class E W211 (1).jpg" alt="Product 6">
+                <h3>Traditional Dish 6</h3>
+                <p class="price">$14</p>
+                <p class="offers">Special weekend discount</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="order-now">Order Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollRightProducts()">&#10095;</button>
+    </div>
+
+    <!-- Section for exploring more dishes -->
+    <h5>Explore</h5>
+    <div class="products">
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="mainimage.jpg" alt="Product 1">
+            <h3>Traditional Dish 1</h3>
+            <p class="price">$10</p>
+            <p class="offers">20% off on first order</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="image1.jpg" alt="Product 2">
+            <h3>Traditional Dish 2</h3>
+            <p class="price">$12</p>
+            <p class="offers">Buy 1 Get 1 Free</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="image2.jpg" alt="Product 3">
+            <h3>Traditional Dish 3</h3>
+            <p class="price">$15</p>
+            <p class="offers">Free dessert with every meal</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="image3.jpg" alt="Product 4">
+            <h3>Traditional Dish 4</h3>
+            <p class="price">$9</p>
+            <p class="offers">10% off on orders above $50</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="image4.jpg" alt="Product 5">
+            <h3>Traditional Dish 5</h3>
+            <p class="price">$8</p>
+            <p class="offers">15% off for new customers</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="All about Mercedes AMG (1).jpg" alt="Product 6">
+            <h3>Traditional Dish 6</h3>
+            <p class="price">$14</p>
+            <p class="offers">Special weekend discount</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="Men's Wealthy Lifestyle.jpg" alt="Product 5">
+            <h3>Traditional Dish 5</h3>
+            <p class="price">$8</p>
+            <p class="offers">15% off for new customers</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Individual product -->
+        <div class="product" data-aos="fade-up">
+            <img src="Mercedes Class E W211 (1).jpg" alt="Product 6">
+            <h3>Traditional Dish 6</h3>
+            <p class="price">$14</p>
+            <p class="offers">Special weekend discount</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="order-now">Order Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer brand section -->
+            <div class="footer-brand">
+                <h3>Designed by <br> Dabiang and Wonderful</h3>
+            </div>
+            <!-- Footer social media section -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter' ></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram' ></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin' ></i></a></li>
+                </ul>
+            </div>
+            <!-- Footer newsletter section -->
+            <div class="footer-newsletter">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <!-- Footer affiliate section -->
+            <div class="footer-affiliate">
+                <h4>Affiliated Companies</h4>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Company 1</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Company 2</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Company 3</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Company 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) JavaScript library -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration
+        });
+    function scrollLeftProducts() {
+        const container = document.querySelector('.today-special');
+        container.scrollBy({
+            left: -400, // Adjust the value as needed
+            behavior: 'smooth'
+        });
+    }
+
+    function scrollRightProducts() {
+        const container = document.querySelector('.today-special');
+        container.scrollBy({
+            left: 400, // Adjust the value as needed
+            behavior: 'smooth'
+        });
+    }
+    </script>
+
+</body>
+</html>

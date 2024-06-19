@@ -1,0 +1,87 @@
+/* Global styles */
+body {
+    font-family: Lato; /* Set the font family for the entire document */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: #f5f5f5; /* Set background color */
+}
+
+/* Header styles */
+header {
+    background-color: #002605; /* Dark green background */
+    color: white; /* White text color */
+    padding: 20px; /* Padding around header content */
+    text-align: center; /* Center align text */
+}
+
+/* Main content styles */
+main {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align flex items horizontally */
+    align-items: center; /* Center align flex items vertically */
+    padding: 20px; /* Padding around main content */
+}
+
+/* Delivery form section styles */
+.delivery-form-section {
+    background: #b0deb5; /* Light green background */
+    padding: 20px; /* Padding inside the section */
+    margin: 10px; /* Margin around the section */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+}
+
+.delivery-form-section h2 {
+    margin-top: 0; /* Remove top margin for h2 within delivery form section */
+}
+
+/* Delivery form styles */
+#delivery-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Arrange form items vertically */
+}
+
+#delivery-form label {
+    margin-top: 10px; /* Top margin for form labels */
+}
+
+#delivery-form input {
+    padding: 10px; /* Padding inside input fields */
+    margin-top: 5px; /* Top margin for input fields */
+    border: 2px solid #002605; /* Dark green border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    width: calc(100% - 22px); /* Adjust width to fit within padding and border */
+}
+
+/* Confirm order button styles */
+#confirm-order-btn {
+    padding: 15px 30px; /* Padding inside button */
+    background: white; /* White background */
+    color: #002605; /* Dark green text color */
+    border: 2px solid #002605; /* Dark green border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    margin-top: 20px; /* Top margin for button */
+    border-radius: 5px; /* Rounded corners */
+    align-self: center; /* Center align button horizontally */
+ 
+}
+
+#confirm-order-btn:hover {
+    background-color: #002605; /* Dark green background on hover */
+    color: #b0deb5; /* Light green text color on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Responsive layout for screens up to 768px */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack main content vertically on smaller screens */
+    }
+
+    .delivery-form-section {
+        width: 100%; /* Full width for delivery form section on smaller screens */
+    }
+}

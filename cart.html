@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Meiramew</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1>Meiramew Cart</h1>
+    </header>
+    <main>
+        <section class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </section>
+        <section class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Delivery Fee: $<span id="delivery-fee">5.00</span></p>
+            <p>Total: $<span id="total">0.00</span></p>
+            <a href="address.html">
+            <button id="confirm-btn">Confirm</button>
+            </a>
+        </section>
+        <section class="cancellation-policy">
+            <h2>Cancellation Policy</h2>
+            <p>If you choose to cancel, you can do it within 60 seconds after placing the order. <br>
+                Post 60 seconds, you will be charged a 100% cancellation fee. <br>
+                However, in the event of an unusual delay of your order, you will not be charged a cancellation fee. <br>
+                This policy helps us avoid food wastage and compensate restaurants / delivery partners for their efforts.</p>
+        </section>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const subtotalElement = document.getElementById('subtotal');
+    const totalElement = document.getElementById('total');
+    const deliveryFee = 5.00;
+
+    const cartItems = [
+        {
+            id: 1,
+            name: 'Traditional Dish 1',
+            price: 10.00,
+            quantity: 1,
+            imgSrc: 'https://via.placeholder.com/300'
+        },
+        {
+            id: 2,
+            name: 'Traditional Dish 2',
+            price: 12.00,
+            quantity: 1,
+            imgSrc: 'https://via.placeholder.com/300'
+        }
+    ];
+
+    const renderCartItems = () => {
+        cartItemsContainer.innerHTML = '';
+        cartItems.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <img src="${item.imgSrc}" alt="${item.name}">
+                <div class="cart-item-details">
+                    <h3>${item.name}</h3>
+                    <p class="price">$${item.price.toFixed(2)}</p>
+                </div>
+                <div class="quantity-controls">
+                    <button onclick="decrementQuantity(${item.id})">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="incrementQuantity(${item.id})">+</button>
+                    <button class="delete-button" onclick="deleteItem(${item.id})">Delete</button>
+                </div>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+        calculateTotal();
+    };
+
+    const calculateTotal = () => {
+        let subtotal = 0;
+        cartItems.forEach(item => {
+            subtotal += item.price * item.quantity;
+        });
+        subtotalElement.textContent = subtotal.toFixed(2);
+        totalElement.textContent = (subtotal + deliveryFee).toFixed(2);
+    };
+
+    window.incrementQuantity = (itemId) => {
+        const item = cartItems.find(item => item.id === itemId);
+        if (item) {
+            item.quantity += 1;
+            renderCartItems();
+        }
+    };
+
+    window.decrementQuantity = (itemId) => {
+        const item = cartItems.find(item => item.id === itemId);
+        if (item && item.quantity > 1) {
+            item.quantity -= 1;
+            renderCartItems();
+        }
+    };
+
+    window.deleteItem = (itemId) => {
+        const itemIndex = cartItems.findIndex(item => item.id === itemId);
+        if (itemIndex !== -1) {
+            cartItems.splice(itemIndex, 1);
+            renderCartItems();
+        }
+    };
+
+    document.getElementById('confirm-btn').addEventListener('click', () => {
+        // Implement navigation to the payment page here
+        alert('Proceeding to delivery address');
+    });
+
+    renderCartItems();
+});
+
+
+    </script>
+</body>
+</html>

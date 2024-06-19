@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login / Signup Meiramew</title>
+    <link rel="stylesheet" href="loginsignup.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <!-- Custom shape divider at the bottom -->
+    <div class="custom-shape-divider-bottom-1718637309">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Main container for the login/signup content -->
+    <div class="container">
+        <h1>Welcome to Meiramew</h1> <!-- Main heading -->
+        <h2>Login / Signup</h2> <!-- Subheading -->
+
+        <!-- Signup form -->
+        <form action="#" method="post" id="signupForm">
+            <fieldset>
+                <!-- Radio buttons to choose signup method -->
+                <div class="radio-group">
+                    <input type="radio" id="emailSignup" name="signupMethod" value="email" checked>
+                    <label for="emailSignup">Sign up with Email</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="phoneSignup" name="signupMethod" value="phone">
+                    <label for="phoneSignup">Sign up with Phone Number</label>
+                </div>
+            </fieldset>
+            
+            <!-- Email signup section -->
+            <div id="emailSection" class="input-section">
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                <button type="button" id="sendEmailOTP">Send OTP</button>
+            </div>
+            
+            <!-- Phone signup section (hidden by default) -->
+            <div id="phoneSection" class="input-section" style="display:none;">
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                <button type="button" id="sendPhoneOTP">Send OTP</button>
+            </div>
+            
+            <!-- OTP verification section (hidden by default) -->
+            <div id="otpSection" class="input-section" style="display:none;">
+                <input type="text" id="otp" name="otp" required placeholder="Enter the OTP sent to your email/phone">
+                <button type="submit" id="verifyOTP">Verify</button>
+            </div>
+        </form>
+        <div class="icon-container">
+            <i class='bx bxl-google'></i>
+        </div>
+
+        <!-- Link to login page if the user already has an account -->
+        <div class="login-link">
+            <p>Already have an account? <a href="login-page-url">Login here</a></p>
+        </div>
+
+        <!-- Footer with additional links -->
+        <div class="footer">
+            <a href="#">Contact Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling form interactions -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const emailSignup = document.getElementById("emailSignup");
+            const phoneSignup = document.getElementById("phoneSignup");
+            const emailSection = document.getElementById("emailSection");
+            const phoneSection = document.getElementById("phoneSection");
+            const otpSection = document.getElementById("otpSection");
+            const sendEmailOTP = document.getElementById("sendEmailOTP");
+            const sendPhoneOTP = document.getElementById("sendPhoneOTP");
+
+            // Show email section if email signup is selected
+            emailSignup.addEventListener("change", function() {
+                if (emailSignup.checked) {
+                    emailSection.style.display = "block";
+                    phoneSection.style.display = "none";
+                }
+            });
+
+            // Show phone section if phone signup is selected
+            phoneSignup.addEventListener("change", function() {
+                if (phoneSignup.checked) {
+                    phoneSection.style.display = "block";
+                    emailSection.style.display = "none";
+                }
+            });
+
+            // Show OTP section when sending email OTP
+            sendEmailOTP.addEventListener("click", function() {
+                // Implement email OTP sending logic
+                // For demo purposes, assume it's sent
+                otpSection.style.display = "block";
+            });
+
+            // Show OTP section when sending phone OTP
+            sendPhoneOTP.addEventListener("click", function() {
+                // Implement phone OTP sending logic
+                // For demo purposes, assume it's sent
+                otpSection.style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Set the default font family and background color for the body element, 
+   remove default margin and padding */
+   body {
+    font-family: Lato, sans-serif;
+    background-color: #b0deb5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the main container with a maximum width, center it with auto margins, 
+   and apply background color and padding */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #b0deb5;
+    padding: 20px;
+}
+
+/* Center-align headings and set their color */
+h1, h2, h3 {
+    text-align: center;
+    color: #002605;
+}
+
+/* Set the font size for h1 headings */
+h1 {
+    font-size: 2.5em;
+}
+
+/* Center-align the form and add margin to the top */
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Remove the border and add bottom margin for fieldsets */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Add bottom margin and set color for radio button groups */
+.radio-group {
+    margin-bottom: 10px;
+    color: #002605;
+}
+
+/* Style the input sections with flexbox for vertical alignment and centering */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #002605;
+}
+
+/* Add bottom margin to labels inside input sections */
+.input-section label {
+    margin-bottom: 5px;
+}
+
+/* Style text, email, and telephone input fields with padding, margins, width, 
+   border, and border-radius */
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the button with padding, background color, text color, border-radius, 
+   and add a transition for hover effect */
+button {
+    padding: 10px 20px;
+    background-color: #002605;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change button background color on hover */
+button:hover {
+    background-color: #0056b3;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container i {
+    font-size: 1.7em; /* Adjust the font size as needed */
+    padding: 5px;
+}
+.icon-container i:hover{
+    color: #b0deb5;
+    background-color: #002605;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    
+}
+/* Center-align the login link and add top margin */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #002605;
+}
+
+/* Style links inside the login link section, remove underline by default */
+.login-link a {
+    color: #002605;
+    text-decoration: none;
+}
+
+/* Underline links on hover */
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Center-align footer text and add top margin */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style links inside the footer, remove underline by default */
+.footer a {
+    text-decoration: none;
+    color: #002605;
+}
+
+/* Underline footer links on hover */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Position the custom shape divider at the bottom, rotate it 180 degrees */
+.custom-shape-divider-bottom-1718637309 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+/* Set the SVG properties for the custom shape divider */
+.custom-shape-divider-bottom-1718637309 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 221px;
+}
+
+/* Set the fill color for the custom shape */
+.custom-shape-divider-bottom-1718637309 .shape-fill {
+    fill: #002605;
+}
+
+/* Media query for responsive design adjustments on screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Reduce the margin and padding for the container */
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    /* Reduce the font size for headings */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    /* Make the button full-width with adjusted padding */
+    button {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+    }
+}
